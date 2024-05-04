@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopcart</title>
+</head>
+<body>
+    <h1 style="color: orphans ; font-style: italic;  ">Shoping Cart</h1>
+    <form onsubmit="handleFormSubmit(event)">
+        <label for="amount">Selling Price :</label>
+        <input type="number" name="amount" id="amount" required>
+        <br/>
+        <br/>
+        <label for="discription">Product Name :</label>
+        <input type="text" name="discription" id="discription" required>
+        <br/>
+        <br/>
+        <label for="category">Choose a category :</label>
+        <select name="category" id="category">
+            <option value="food">Food</option>
+            <option value="electronics">Electronics</option>
+            <option value="skincare">Skincare</option>
+           
+          </select>
+        <br/>
+        <br/>
+        <button type="submit" class="btn btn-primary">Add Product</button>
+    </form>
+    <h3>Products</h3>
+    <h4>Electronic Items</h4>
+    <ul id="electronics"></ul>
+    <h4>Food Items</h4>
+    <ul id="food"></ul>
+    <h4>Skincare Items</h4>
+    <ul id="skincare"></ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.1/axios.min.js"></script>
+    <script src="index.js"></script>
+
+</body>
+</html>
